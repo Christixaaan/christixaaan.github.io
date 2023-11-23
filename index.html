@@ -20,6 +20,11 @@
     <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
     <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+8L3xZvxPPYoqfT5ZqyI5t9d6wuE8CcQVnN" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     <noscript>
       <style type="text/css">
         [data-aos] {
@@ -63,13 +68,13 @@
             <div class="social-nav" data-aos="fade-up" data-aos-delay="200">
               <nav role="navigation">
                 <ul class="nav justify-content-left">
-                  <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/christian-umgeher-60451a276" title="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="menu-title sr-only">Twitter</span></a></li>
-                  <li class="nav-item"><a class="nav-link" target="_blank" href="https://www.xing.com/profile/Christian_Umgeher/cv" title="XING"><i class="fab fa-xing-square"></i><span class="menu-title sr-only">Facebook</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/christian-umgeher-60451a276" title="LinkedIn"><i class="fab fa-linkedin-in"></i><span class="menu-title sr-only">Twitter</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="https://www.xing.com/profile/Christian_Umgeher/cv" title="XING"><i class="fab fa-xing-square"></i><span class="menu-title sr-only">Facebook</span></a></li>
                   <li class="nav-item"><a class="nav-link" href="mailto: umgeher21@gmail.com" title="GMail"><i class="fas fa-envelope"></i><span class="menu-title sr-only">Instagram</span></a></li>
                 </ul>
               </nav>
             </div>
-            <div class="mt-3" data-aos="fade-up" data-aos-delay="200"><a class="btn btn-primary shadow-sm mt-1 hover-effect" href="">Mein CV <i class="fas fa-arrow-right"></i></a></div>
+            <div class="mt-3" data-aos="fade-up" data-aos-delay="200"><a class="btn btn-primary shadow-sm mt-1 hover-effect" href="">Mein CV <i style="margin-left: 22px !important" class="fas fa-arrow-right"></i></a></div>
           </div>
         </div>
       </div>
@@ -143,10 +148,10 @@
       <!--<p class="mx-auto mb-3" style="max-width:600px"> I offer services fit for any website or app. I can quickly maximize timely deliverables for real-time schemas.</p>-->
     </div>
     <div class="row py-3">
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="https://www.clil.app/wp-content/uploads/2018/06/MIUR_CLIL_Squared_Not_Flat.png" width="96" height="96" alt="web design"/>
+          <div class="col-md-3 text-center open-pdf" data-aos="fade-up" data-aos-delay="100"><img class="mb-2" src="https://www.clil.app/wp-content/uploads/2018/06/MIUR_CLIL_Squared_Not_Flat.png" width="96" height="96" alt="web design"/>
         <div class="h5">CLiL Certificate (Sekundarstufe I)</div>
       </div>
-      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="https://www.clil.app/wp-content/uploads/2018/06/MIUR_CLIL_Squared_Not_Flat.png" width="96" height="96" alt="graphic design"/>
+      <div class="col-md-3 text-center open-pdf2" data-aos="fade-up" data-aos-delay="200"><img class="mb-2" src="https://www.clil.app/wp-content/uploads/2018/06/MIUR_CLIL_Squared_Not_Flat.png" width="96" height="96" alt="graphic design"/>
         <div class="h5">CLiL Certificate (Sekundarstufe II)</div>
       </div>
       <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300"><img class="mb-2" src="https://2020.drk-schifferstadt.de/wp-content/uploads/2020/12/cropped-DRK_Kreuz512-1.png" width="96" height="96" alt="ui-ux"/>
@@ -158,6 +163,75 @@
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){
+  $('.open-pdf').click(function(){
+    $('#pdfModal1').modal('show');
+  });
+  
+  $('#closeModal').click(function(){
+    $('#pdfModal1').modal('hide');
+  });
+});
+
+$(document).ready(function(){
+  $('.open-pdf2').click(function(){
+    $('#pdfModal2').modal('show');
+  });
+  
+  $('#closeModal2').click(function(){
+    $('#pdfModal2').modal('hide');
+  });
+});
+</script>
+
+<script>
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
+
+
+<div class="modal" id="pdfModal1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">CLiL Certificate (Sekundarstufe I)</h4>
+        <button type="button" class="close" id="closeModal">&times;</button>
+      </div>
+
+      <!-- Modal Body mit dem eingebetteten PDF -->
+      <div class="modal-body" oncontextmenu="return false;">
+        <embed src="pfad/zur/deiner-pdf-datei.pdf" type="application/pdf" width="100%" height="600px" />
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="pdfModal2">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">CLiL Certificate (Sekundarstufe II)</h4>
+        <button type="button" class="close" id="closeModal2">&times;</button>
+      </div>
+
+      <!-- Modal Body mit dem eingebetteten PDF -->
+      <div class="modal-body" oncontextmenu="return false;">
+        <embed src="pfad/zur/deiner-pdf-datei.pdf" type="application/pdf" width="100%" height="600px" />
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <br>
 <br>
 <div class="section px-3 px-lg-4 pt-5" id="skills">
